@@ -1,0 +1,20 @@
+[build-system]
+requires = ["setuptools>=68.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "deepfake-agent-assistant"
+version = "0.1.0"
+description = "A multi-agent research assistant for deepfake detection research."
+requires-python = ">=3.9"
+dependencies = [
+    "openai>=2.0.0",
+    "python-dotenv>=1.0.1",
+    "pypdf>=5.0.0",
+]
+
+[project.scripts]
+deepfake-agent = "deepfake_agent_assistant.cli:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]
